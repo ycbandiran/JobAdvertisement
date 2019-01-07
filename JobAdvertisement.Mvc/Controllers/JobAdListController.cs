@@ -18,14 +18,18 @@ namespace JobAdvertisement.Mvc.Controllers
 
         // GET: JobAdList
 
-        public async Task<ActionResult> JobAdvertising( )
+        public async Task<ActionResult> JobAdvertising(string showAllButton )
         {           
             using(HttpClient client = new HttpClient())
             {
                 var response = await client.GetAsync("http://localhost:51923/api/jobadservice");
                 var model = JsonConvert.DeserializeObject<List<JobAd>>(
                     response.Content.ReadAsStringAsync().Result);
-                return View(model);
+                if (!string.IsNullOrEmpty(showAllButton))
+                {
+                    return View(model.OrderByDescending(y => y.JobAdID).ToList());
+                }                
+                return View(model.OrderByDescending(x => x.JobAdID).Take(5).ToList());
             }            
         }
         

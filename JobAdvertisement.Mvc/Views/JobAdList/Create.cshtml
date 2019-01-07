@@ -23,17 +23,17 @@
             {
                 @Html.AntiForgeryToken()
                 @Html.ValidationSummary(true)
-                <fieldset>
+                <form id="frm">                    
                     <div class="editor-label">
-                        @Html.LabelFor(jobAd => jobAd.JobAdTitle)
+                        <label>Job Title:</label>
                     </div>
                     <div class="editor_field">
                         @Html.TextBoxFor(jobAd => jobAd.JobAdTitle)
                         @Html.ValidationMessageFor(jobAd => jobAd.JobAdTitle)
                     </div>
 
-                    <div class="editor-label">
-                        @Html.LabelFor(jobAd => jobAd.JobAdContent)
+                    <div class="editor-label">                       
+                        <label>Job Content:</label>
                     </div>
                     <div class="editor_field">
                         @Html.TextBoxFor(jobAd => jobAd.JobAdContent)
@@ -41,7 +41,7 @@
                     </div>
 
                     <div class="editor-label">
-                        @Html.LabelFor(jobAd => jobAd.ApplicantName)
+                        <label>Name:</label>
                     </div>
                     <div class="editor_field">
                         @Html.TextBoxFor(jobAd => jobAd.ApplicantName)
@@ -49,30 +49,31 @@
                     </div>
 
                     <div class="editor-label">
-                        @Html.LabelFor(jobAd => jobAd.ApplicantSurname)
+                        <label>Surname:</label>
                     </div>
                     <div class="editor_field">
                         @Html.TextBoxFor(jobAd => jobAd.ApplicantSurname)
                         @Html.ValidationMessageFor(jobAd => jobAd.ApplicantSurname)
                     </div>
                     <div class="editor-label">
-                        @Html.LabelFor(jobAd => jobAd.ApplicantPhoneNumber)
+                        <label>Phone Number:</label>
                     </div>
                     <div class="editor_field">
+                        <span class="unit">(+90)</span>
                         @Html.TextBoxFor(jobAd => jobAd.ApplicantPhoneNumber)
                         @Html.ValidationMessageFor(jobAd => jobAd.ApplicantPhoneNumber)
                     </div>
                     <div class="editor-label">
-                        @Html.LabelFor(jobAd => jobAd.ApplicantEmailAdress)
+                        <label>E-mail Adress:</label>
                     </div>
                     <div class="editor_field">
                         @Html.TextBoxFor(jobAd => jobAd.ApplicantEmailAdress)
                         @Html.ValidationMessageFor(jobAd => jobAd.ApplicantEmailAdress)
                     </div>
                     <p>
-                        <input type="submit" class="btn bg-success" value="Create" />
-                    </p>
-                </fieldset>
+                        <input type="submit" id="create" class="btn bg-success" value="Create"/>                                  
+                    </p>                     
+                </form>
             }
         </div>
 </body>

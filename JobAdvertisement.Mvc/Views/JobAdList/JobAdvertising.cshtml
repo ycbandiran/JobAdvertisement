@@ -16,10 +16,16 @@
     @Html.AntiForgeryToken()
 <body>
     <div class = "container"> 
-        <div class="jumbotron">
-            <h1>Job Advertisement List:</h1>
-            <input type="submit" class="btn bg-success" value="Create New Job Advertisement" onclick="location.href='@Url.Action("Create", "JobAdList")'"/>           
-        </div>
+        <div class="jumbotron">            
+                <h1>Job Advertisement List:</h1>
+            <div class = "btn-toolbar">
+                <input type="submit" class="btn bg-success" value="Create New Job Advertisement" onclick="location.href='@Url.Action("Create", "JobAdList")'" />
+                @using (Html.BeginForm("JobAdvertising", "JobAdList", FormMethod.Post))
+                {
+                    <input type="submit" class="btn bg-info" name="showAllButton" value="Show All Job Advertisements" />
+                }
+            </div>           
+            </div>
         <table class="table">
             <thead>
                 <tr class="table-info">
@@ -72,7 +78,7 @@
                             @JobAd.ApplicantEmailAdress
                         </td>
                     </tr>
-                }
+                    }
             </tbody>
         </table>
     </div>
