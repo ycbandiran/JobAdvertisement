@@ -1,0 +1,79 @@
+﻿@model JobAdvertisement.DataAccess.Model.JobAd
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Create New Job Advertisement:</h1>
+            </div>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+                <fieldset>
+                    <div class="editor-label">
+                        @Html.LabelFor(jobAd => jobAd.JobAdTitle)
+                    </div>
+                    <div class="editor_field">
+                        @Html.TextBoxFor(jobAd => jobAd.JobAdTitle)
+                        @Html.ValidationMessageFor(jobAd => jobAd.JobAdTitle)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(jobAd => jobAd.JobAdContent)
+                    </div>
+                    <div class="editor_field">
+                        @Html.TextBoxFor(jobAd => jobAd.JobAdContent)
+                        @Html.ValidationMessageFor(jobAd => jobAd.JobAdContent)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(jobAd => jobAd.ApplicantName)
+                    </div>
+                    <div class="editor_field">
+                        @Html.TextBoxFor(jobAd => jobAd.ApplicantName)
+                        @Html.ValidationMessageFor(jobAd => jobAd.ApplicantName)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(jobAd => jobAd.ApplicantSurname)
+                    </div>
+                    <div class="editor_field">
+                        @Html.TextBoxFor(jobAd => jobAd.ApplicantSurname)
+                        @Html.ValidationMessageFor(jobAd => jobAd.ApplicantSurname)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(jobAd => jobAd.ApplicantPhoneNumber)
+                    </div>
+                    <div class="editor_field">
+                        @Html.TextBoxFor(jobAd => jobAd.ApplicantPhoneNumber)
+                        @Html.ValidationMessageFor(jobAd => jobAd.ApplicantPhoneNumber)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(jobAd => jobAd.ApplicantEmailAdress)
+                    </div>
+                    <div class="editor_field">
+                        @Html.TextBoxFor(jobAd => jobAd.ApplicantEmailAdress)
+                        @Html.ValidationMessageFor(jobAd => jobAd.ApplicantEmailAdress)
+                    </div>
+                    <p>
+                        <input type="submit" class="btn bg-success" value="Create" />
+                    </p>
+                </fieldset>
+            }
+        </div>
+</body>
+</html>

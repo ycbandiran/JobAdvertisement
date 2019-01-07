@@ -1,0 +1,80 @@
+﻿@model List<JobAdvertisement.DataAccess.Model.JobAd>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>JobAdvertising</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+    @Html.AntiForgeryToken()
+<body>
+    <div class = "container"> 
+        <div class="jumbotron">
+            <h1>Job Advertisement List:</h1>
+            <input type="submit" class="btn bg-success" value="Create New Job Advertisement" onclick="location.href='@Url.Action("Create", "JobAdList")'"/>           
+        </div>
+        <table class="table">
+            <thead>
+                <tr class="table-info">
+                    <th>
+                        Job ID
+                    </th>
+                    <th>
+                        Job Title
+                    </th>
+                    <th>
+                        Job Content                       
+                    </th>
+                    <th>
+                        Employer Name
+                    </th>
+                    <th>
+                        Employer Surname
+                    </th>
+                    <th>
+                        Employer PhoneNumber
+                    </th>
+                    <th>
+                        Employer Email Adress
+                    </th>
+                </tr>               
+            </thead>
+            <tbody>
+                @foreach (var JobAd in Model)
+                {
+                    <tr>
+                        <td>
+                            @JobAd.JobAdID
+                        </td>
+                        <td>
+                            @JobAd.JobAdTitle
+                        </td>
+                        <td>
+                            @JobAd.JobAdContent
+                        </td>
+                        <td>
+                            @JobAd.ApplicantName
+                        </td>
+                        <td>
+                            @JobAd.ApplicantSurname
+                        </td>
+                        <td>
+                            @JobAd.ApplicantPhoneNumber
+                        </td>
+                        <td>
+                            @JobAd.ApplicantEmailAdress
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
