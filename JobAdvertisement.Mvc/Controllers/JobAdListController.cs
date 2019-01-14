@@ -6,20 +6,28 @@ using System.Web.Mvc;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using JobAdvertisement.DataAccess.Model;
-using JobAdvertisement.DataAccess;
+using JobAdvertisement.Entity.Concrete;
+using JobAdvertisement.DataAccess.Concrete.Context;
+using JobAdvertisement.DataAccess.Concrete.Repository;
+using JobAdvertisement.DataAccess.Concrete.UnitOfWork;
+using JobAdvertisement.DataAccess.Abstract;
+
 
 namespace JobAdvertisement.Mvc.Controllers
 {    
     public class JobAdListController : Controller
     {
-        JobAdContext jobAdContext = new JobAdContext();
+        private JobAdContext _dbContext;
 
+        private IUnitOfWork _uow;
+        private IRepository<JobAd> _jobAdRepository;
+
+        //GET TARAFINA REPOSİTORY EKLENECEK !!!!!!!!!!!
 
         // GET: JobAdList
 
-        public async Task<ActionResult> JobAdvertising(string showAllButton )
-        {           
+        public async Task<ActionResult> JobAdvertising(string showAllButton)
+        {                       
             using(HttpClient client = new HttpClient())
             {
                 var response = await client.GetAsync("http://localhost:51923/api/jobadservice");
@@ -41,6 +49,7 @@ namespace JobAdvertisement.Mvc.Controllers
             return View();
         }
 
+        //POST TARAFINA ASYNC YAPILACAK (YAPAMADI) !!!!!!!!!!!!!!!!!!
 
         // POST: JobAdList/Create        
 
@@ -49,11 +58,15 @@ namespace JobAdvertisement.Mvc.Controllers
 
       public ActionResult Create(JobAd jobAd)
         {
+            _dbContext = new JobAdContext();
+            _uow = new EfUnitOfWork(_dbContext);
+            _jobAdRepository = new EfRepository<JobAd>(_dbContext);
+
             if (ModelState.IsValid)
             {
-                jobAdContext.JobAd.Add(jobAd);
-                jobAdContext.SaveChanges();
-
+                _jobAdRepository.Add(jobAd);
+                _uow.SaveChanges();
+              
                 return RedirectToAction("JobAdvertising");
             }    
                     

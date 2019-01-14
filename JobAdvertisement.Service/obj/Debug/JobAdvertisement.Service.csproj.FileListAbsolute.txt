@@ -45,3 +45,5 @@ C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\Job
 C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.Service\obj\Debug\JobAdvertisement.Service.csprojResolveAssemblyReference.cache
 C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.Service\obj\Debug\JobAdvertisement.Service.dll
 C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.Service\obj\Debug\JobAdvertisement.Service.pdb
+C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.Service\bin\JobAdvertisement.Entity.dll
+C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.Service\bin\JobAdvertisement.Entity.pdb

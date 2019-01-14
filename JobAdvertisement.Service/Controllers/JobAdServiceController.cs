@@ -4,8 +4,10 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using JobAdvertisement.DataAccess.Model;
-using JobAdvertisement.DataAccess;
+using JobAdvertisement.DataAccess.Concrete.Context;
+using JobAdvertisement.Entity.Concrete;
+using JobAdvertisement.DataAccess.Concrete.Repository;
+using JobAdvertisement.DataAccess.Concrete.UnitOfWork;
 
 namespace JobAdvertisement.Service.Controllers
 {
@@ -14,17 +16,16 @@ namespace JobAdvertisement.Service.Controllers
         // GET: api/JobAdService
         public List<JobAd> Get()
         {
-            using(JobAdContext jobAdContext = new JobAdContext())
+            using (JobAdContext jobAdContext = new JobAdContext())
             {
                 return jobAdContext.JobAd.ToList();
             }           
         }
-       
+
         public bool Post(List<JobAd> jobAdList)
         {
             try
             {
-                throw new Exception();
                 using (JobAdContext context = new JobAdContext())
                 {
                     context.JobAd.AddRange(jobAdList);

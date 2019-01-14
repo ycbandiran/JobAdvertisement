@@ -151,6 +151,10 @@
       <Project>{e138ec2e-f21d-46ef-b526-1d065d15dc9f}</Project>
       <Name>JobAdvertisement.DataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\JobAdvertisement.Entity\JobAdvertisement.Entity.csproj">
+      <Project>{69883325-906a-4dc4-a4f1-95bd970564c4}</Project>
+      <Name>JobAdvertisement.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

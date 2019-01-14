@@ -101,3 +101,5 @@ C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\Job
 C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.Mvc\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.Mvc\bin\Newtonsoft.Json.pdb
 C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.Mvc\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.Mvc\bin\JobAdvertisement.Entity.dll
+C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.Mvc\bin\JobAdvertisement.Entity.pdb

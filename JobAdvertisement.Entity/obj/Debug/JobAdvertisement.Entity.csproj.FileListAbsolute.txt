@@ -1,0 +1,10 @@
+C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.Entity\bin\Debug\JobAdvertisement.Entity.dll.config
+C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.Entity\bin\Debug\JobAdvertisement.Entity.dll
+C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.Entity\bin\Debug\JobAdvertisement.Entity.pdb
+C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.Entity\bin\Debug\EntityFramework.dll
+C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.Entity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.Entity\bin\Debug\EntityFramework.xml
+C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.Entity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.Entity\obj\Debug\JobAdvertisement.Entity.dll
+C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.Entity\obj\Debug\JobAdvertisement.Entity.pdb
+C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.Entity\obj\Debug\JobAdvertisement.Entity.csprojResolveAssemblyReference.cache

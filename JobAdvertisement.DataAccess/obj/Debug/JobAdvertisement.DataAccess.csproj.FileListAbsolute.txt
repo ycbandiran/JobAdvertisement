@@ -8,3 +8,5 @@ C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\Job
 C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.DataAccess\obj\Debug\JobAdvertisement.DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.DataAccess\obj\Debug\JobAdvertisement.DataAccess.dll
 C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.DataAccess\obj\Debug\JobAdvertisement.DataAccess.pdb
+C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.DataAccess\bin\Debug\JobAdvertisement.Entity.dll
+C:\Users\antuarichiro\Documents\Visual Studio 2015\Projects\JobAdvertisement\JobAdvertisement.DataAccess\bin\Debug\JobAdvertisement.Entity.pdb
